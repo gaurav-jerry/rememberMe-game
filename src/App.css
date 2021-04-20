@@ -67,3 +67,8 @@
   color: white;
   width: 100%;
 }
+.description {
+  line-height: 10vh;
+  height: 10vh;
+  text-align: center;
+}

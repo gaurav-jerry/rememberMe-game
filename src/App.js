@@ -1,4 +1,5 @@
 import ColorCard from "./ColorCard";
+import Description from "./Description";
 import { useState, useEffect } from "react";
 import Header from "./Header";
 import "./App.css";
@@ -16,6 +17,11 @@ function App() {
   const colors = ["red", "green", "yellow", "blue"];
 
   const onPlayClick = () => {
+    setstate({
+      ...state,
+      isPlaying: true,
+      isFlashing: true,
+    });
     startGame();
   };
   const timeout = (millis) => {
@@ -82,6 +88,7 @@ function App() {
         )}
         {state.isPlaying && <div className="score">{state.score}</div>}
       </div>
+      <Description />
     </div>
   );
 }
